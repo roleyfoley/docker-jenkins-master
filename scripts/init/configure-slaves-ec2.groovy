@@ -52,7 +52,7 @@ private void configureCloud() {
     try {
         Logger.global.info("Creating ECS Template")
         def ecsTemplates = templates = Arrays.asList(
-                createECSTaskTemplate('codeontap', 'codeontap/gen3:jenkinsslave-stable', 2048, 2048)
+                createECSTaskTemplate('codeontap', 'codeontap/gen3:jenkinsslave-stable', 2048, 2048),
                 createECSTaskTemplate('codeontap-latest', 'codeontap/gen3:jenkinsslave-latest', 2048, 2048)
         )
         String envClusterArn = getClusterArn()
